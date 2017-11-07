@@ -1,0 +1,13 @@
+{% extends 'arbitros/base.html' %}
+
+   {% block content %}
+       <div class="agenda">
+           {% if agendas.partido.nombre %}
+           {% endif %}
+           <a class="btn btn-default" href="{% url 'arbitros.views.agenda_editar' pk=agendas.pk %}"><span class="glyphicon glyphicon-pencil"> Editar</span></a>
+           <h2>Partido: {{ agendas.partido.nombre }}</h4>
+           <h3>Fecha: {{ agendas.partido.fecha }}</h1>
+           <h4>Arbitro: {{ agendas.arbitro.nombre }}</h4>
+           <h4>Telefono: {{ agendas.arbitro.telefono|linebreaksbr }}</h3>
+       </div>
+   {% endblock %}

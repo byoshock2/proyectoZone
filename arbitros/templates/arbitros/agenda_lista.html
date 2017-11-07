@@ -1,0 +1,11 @@
+{% extends 'arbitros/base.html' %}
+
+{% block content %}
+<a class="btn btn-default" href="{% url 'arbitros.views.agenda_nueva' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span> Agenda Nueva</a>
+    {% for post in agendas %}
+        <div class="agenda">
+            <h1><a href="{% url 'arbitros.views.agenda_detalle' pk=post.pk %}">{{ post.partido.nombre }}</a></h1>
+        </div>
+    {% endfor %}
+
+{% endblock content %}

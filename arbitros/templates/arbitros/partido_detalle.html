@@ -1,0 +1,15 @@
+{% extends 'arbitros/base.html' %}
+
+   {% block content %}
+       <div class="agenda">
+           {% if partidos.nombre %}
+           {% endif %}
+           <a class="btn btn-default" href="{% url 'partido_del' pk=partidos.pk %}"><span class="glyphicon glyphicon-remove"> Eliminar</span></a>
+           <a class="btn btn-default" href="{% url 'partido_editar' pk=partidos.pk %}"><span class="glyphicon glyphicon-pencil"> Editar</span></a>
+
+           <h2>{{ partidos.nombre }}</h2>
+           <h6>Descripción: {{ partidos.descripcion }}</h6>
+           <h4>Precio: {{ partidos.fecha }}</h4>
+
+       </div>
+   {% endblock %}

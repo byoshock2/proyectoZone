@@ -1,0 +1,13 @@
+{% extends 'arbitros/base.html' %}
+
+   {% block content %}
+       <div class="agenda">
+           {% if arbitros.nombre %}
+           {% endif %}
+          <h2>{{ arbitros.nombre }}</h2>
+           <h5>Telefono: {{ arbitros.telefono }}</h5>
+           <a class="waves-effect waves-light btn" href="{% url 'arbitro_del' pk=arbitros.pk %}"><i class="material-icons left">delete</i>Eliminar</a>
+           <a class="waves-effect waves-light btn" href="{% url 'arbitro_editar' pk=arbitros.pk %}"><i class="material-icons left">edit</i>Editar</a>
+
+          </div>
+   {% endblock %}
